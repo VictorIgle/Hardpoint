@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hardpoint</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="Js/index.js" defer></script>
+</head>
+
+<body>
+    
+  <!-- Header -->
+  <header class="fixed top-0 w-full bg-gradient-to-r from-blue-600 to-purple-800 text-white z-10">
+    <div class="container mx-auto flex justify-between items-center p-4">
+      <h1 class="text-2xl font-bold">Hardpoint</h1>
+      <button id="menuButton" class="text-white md:hidden focus:outline-none">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+      <nav id="menu" class="hidden md:flex space-x-4 items-center">
+        <a href="#inicio" class="hover:text-gray-400">Inicio</a>
+        <a href="#productos" class="hover:text-gray-400">Productos</a>
+        <a href="#tarjetas-graficas" class="hover:text-gray-400">Top GPU</a>
+        <a href="#" class="hover:text-gray-400">Custom</a>
+        <a href="#contacto" class="hover:text-gray-400">Contacto</a>
+        <a href="#" class="hover:text-gray-400">Asistencia</a>
+        <a href="#" class="hover:text-gray-400 flex items-center">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white hover:text-gray-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="9" cy="21" r="1" />
+            <circle cx="20" cy="21" r="1" />
+            <path d="M1 1h4l2.6 13.6a1 1 0 0 0 1 .8h11.8a1 1 0 0 0 1-.8l1.6-8H6" />
+          </svg>
+        </a>
+      </nav>
+    </div>
+
+    <!-- Menú desplegable (para la versión de móviles) -->
+    <div id="accordionMenu" class="max-h-0 overflow-hidden transition-[max-height] duration-500 ease-in-out bg-gradient-to-r from-blue-600 to-purple-800 md:hidden">
+      <a href="#inicio" class="block px-4 py-2 text-white hover:bg-gray-600">Inicio</a>
+      <a href="#productos" class="block px-4 py-2 text-white hover:bg-gray-600">Productos</a>
+      <a href="#tarjetas-graficas" class="block px-4 py-2 text-white hover:bg-gray-600">Top GPU</a>
+      <a href="#" class="block px-4 py-2 text-white hover:bg-gray-600">Custom</a>
+      <a href="#contacto" class="block px-4 py-2 text-white hover:bg-gray-600">Contacto</a>
+      <a href="#" class="block px-4 py-2 text-white hover:bg-gray-600">Asistencia</a>
+      <a href="#" class="block px-4 py-2 text-white hover:bg-gray-600 flex items-center">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="9" cy="21" r="1" />
+          <circle cx="20" cy="21" r="1" />
+          <path d="M1 1h4l2.6 13.6a1 1 0 0 0 1 .8h11.8a1 1 0 0 0 1-.8l1.6-8H6" />
+        </svg>
+      </a>
+    </div>
+  </header>
+
+  <!--About-->
+  <section id="about" class="bg-gray-100 pt-20 pb-16">
+    <div class="container mx-auto px-4 flex flex-col md:flex-row items-center space-y-8 md:space-y-0 md:space-x-12">
+      
+      <div class="md:w-1/2 text-center md:text-left">
+        <h2 class="text-4xl font-bold text-gray-800 mb-4">Acerca de Nosotros</h2>
+        <p class="text-gray-600 text-lg leading-relaxed mb-6">
+          En <span class="font-bold text-gray-900">Hardpoint</span>, nos apasiona ofrecer productos de alta calidad para entusiastas de la tecnología y profesionales. Contamos con una amplia gama de componentes, desde tarjetas gráficas de última generación hasta soluciones personalizadas para tus proyectos de hardware. 
+        </p>
+        <p class="text-gray-600 text-lg leading-relaxed mb-6">
+          Nuestro equipo está compuesto por expertos que están aquí para ayudarte a encontrar justo lo que necesitas, ya seas un principiante o un profesional experimentado.
+        </p>
+        
+        <button>
+          <a href="#productos" class="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg shadow hover:bg-blue-700 transition duration-300">
+            Descubre nuestros productos
+          </a>
+        </button>
+        
+      </div>
+      
+      
+      <div class="md:w-1/2">
+        <img src="https://via.placeholder.com/500x300" alt="About Hardware Store" class="rounded-lg shadow-md">
+      </div>
+
+    </div>
+  </section>
+
+
+
+  <!-- Bienvenida -->
+  <section id="inicio" class="bg-white py-20">
+    <div class="container mx-auto text-center">
+      <h2 class="text-4xl font-bold text-gray-800">Bienvenido a Hardpoint</h2>
+      <p class="text-gray-600 mt-4">Encuentra las mejores piezas y equipos para tus proyectos.</p>
+      <button class="mt-6 bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700">Ver Productos</button>
+    </div>
+  </section>
+
+  <!-- Mas vendidos -->
+  <section id="productos" class="bg-gray-100 py-20">
+    <div class="container mx-auto">
+      <h3 class="text-3xl font-bold text-gray-800 text-center mb-10">Top productos</h3>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        
+        <div class="bg-white shadow-md rounded overflow-hidden">
+          <img src="https://via.placeholder.com/300x200" alt="Producto 1" class="w-full">
+          <div class="p-4">
+            <h4 class="text-xl font-bold">Procesador Intel i9</h4>
+            <p class="text-gray-600 mt-2">Potencia extrema para gaming y trabajo.</p>
+            <button class="mt-4 bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Comprar</button>
+          </div>
+        </div>
+
+        
+        <div class="bg-white shadow-md rounded overflow-hidden">
+          <img src="https://via.placeholder.com/300x200" alt="Producto 2" class="w-full">
+          <div class="p-4">
+            <h4 class="text-xl font-bold">Tarjeta Gráfica RTX 4090</h4>
+            <p class="text-gray-600 mt-2">Rendimiento increíble para gamers y diseñadores.</p>
+            <button class="mt-4 bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Comprar</button>
+          </div>
+        </div>
+
+       
+        <div class="bg-white shadow-md rounded overflow-hidden">
+          <img src="https://via.placeholder.com/300x200" alt="Producto 3" class="w-full">
+          <div class="p-4">
+            <h4 class="text-xl font-bold">Memoria RAM 32GB</h4>
+            <p class="text-gray-600 mt-2">Velocidad y capacidad para cualquier tarea.</p>
+            <button class="mt-4 bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Comprar</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+<!-- Carrusel de productos destacados -->
+<section id="carrusel" class="bg-gray-200 py-10">
+  <div class="container mx-auto">
+    <h3 class="text-3xl font-bold text-gray-800 text-center mb-6">Productos destacados</h3>
+    <div class="relative overflow-hidden">
+      <div id="carousel" class="flex transition-transform duration-500">
+        
+        <div class="flex-none w-full sm:w-1/3 p-2">
+          <div class="relative bg-white shadow-md rounded overflow-hidden">
+            <img src="https://via.placeholder.com/300x200" alt="Producto 1" class="w-full">
+            <div class="absolute bottom-0 bg-black bg-opacity-50 text-white w-full text-center py-2">
+              <span>Producto 1</span>
+            </div>
+          </div>
+        </div>
+
+        
+        <div class="flex-none w-full sm:w-1/3 p-2">
+          <div class="relative bg-white shadow-md rounded overflow-hidden">
+            <img src="https://via.placeholder.com/300x200" alt="Producto 2" class="w-full">
+            <div class="absolute bottom-0 bg-black bg-opacity-50 text-white w-full text-center py-2">
+              <span>Producto 2</span>
+            </div>
+          </div>
+        </div>
+
+        
+        <div class="flex-none w-full sm:w-1/3 p-2">
+          <div class="relative bg-white shadow-md rounded overflow-hidden">
+            <img src="https://via.placeholder.com/300x200" alt="Producto 3" class="w-full">
+            <div class="absolute bottom-0 bg-black bg-opacity-50 text-white w-full text-center py-2">
+              <span>Producto 3</span>
+            </div>
+          </div>
+        </div>
+
+        
+        <div class="flex-none w-full sm:w-1/3 p-2">
+          <div class="relative bg-white shadow-md rounded overflow-hidden">
+            <img src="https://via.placeholder.com/300x200" alt="Producto 2" class="w-full">
+            <div class="absolute bottom-0 bg-black bg-opacity-50 text-white w-full text-center py-2">
+              <span>Producto 4</span>
+            </div>
+          </div>
+        </div>
+
+        
+        <div class="flex-none w-full sm:w-1/3 p-2">
+          <div class="relative bg-white shadow-md rounded overflow-hidden">
+            <img src="https://via.placeholder.com/300x200" alt="Producto 2" class="w-full">
+            <div class="absolute bottom-0 bg-black bg-opacity-50 text-white w-full text-center py-2">
+              <span>Producto 5</span>
+            </div>
+          </div>
+        </div>
+
+        
+        <div class="flex-none w-full sm:w-1/3 p-2">
+          <div class="relative bg-white shadow-md rounded overflow-hidden">
+            <img src="https://via.placeholder.com/300x200" alt="Producto 2" class="w-full">
+            <div class="absolute bottom-0 bg-black bg-opacity-50 text-white w-full text-center py-2">
+              <span>Producto 6</span>
+            </div>
+          </div>
+        </div>
+
+        
+        <div class="flex-none w-full sm:w-1/3 p-2">
+          <div class="relative bg-white shadow-md rounded overflow-hidden">
+            <img src="https://via.placeholder.com/300x200" alt="Producto 2" class="w-full">
+            <div class="absolute bottom-0 bg-black bg-opacity-50 text-white w-full text-center py-2">
+              <span>Producto 7</span>
+            </div>
+          </div>
+        </div>
+
+        
+        <div class="flex-none w-full sm:w-1/3 p-2">
+          <div class="relative bg-white shadow-md rounded overflow-hidden">
+            <img src="https://via.placeholder.com/300x200" alt="Producto 2" class="w-full">
+            <div class="absolute bottom-0 bg-black bg-opacity-50 text-white w-full text-center py-2">
+              <span>Producto 8</span>
+            </div>
+          </div>
+        </div>
+
+        
+        <div class="flex-none w-full sm:w-1/3 p-2">
+          <div class="relative bg-white shadow-md rounded overflow-hidden">
+            <img src="https://via.placeholder.com/300x200" alt="Producto 2" class="w-full">
+            <div class="absolute bottom-0 bg-black bg-opacity-50 text-white w-full text-center py-2">
+              <span>Producto 9</span>
+            </div>
+          </div>
+        </div>
+
+        
+        <div class="flex-none w-full sm:w-1/3 p-2">
+          <div class="relative bg-white shadow-md rounded overflow-hidden">
+            <img src="https://via.placeholder.com/300x200" alt="Producto 2" class="w-full">
+            <div class="absolute bottom-0 bg-black bg-opacity-50 text-white w-full text-center py-2">
+              <span>Producto</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+        <!-- Controles -->
+        <button id="prev" class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-blue-600 text-white p-2 rounded-full">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+          </svg>
+        </button>
+
+        <button id="next" class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-blue-600 text-white p-2 rounded-full">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+          </svg>
+        </button>
+
+    </div>
+  </div>
+</section>
+
+
+  <!-- Top Tarjetas Gráficas -->
+  <section id="tarjetas-graficas" class="bg-gray-100 py-20">
+    <div class="container mx-auto">
+      <h3 class="text-3xl font-bold text-gray-800 text-center mb-10">Top Tarjetas Gráficas</h3>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+        
+        <div class="bg-white shadow-md rounded overflow-hidden">
+          <img src="https://via.placeholder.com/300x200" alt="Tarjeta Gráfica 1" class="w-full">
+          <div class="p-4 text-left">
+            <h4 class="text-lg font-bold">NVIDIA RTX 4090</h4>
+            <p class="text-gray-600 mt-2">La tarjeta gráfica más potente del mercado, ideal para 4K y Ray Tracing.</p>
+            <button class="mt-4 bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">
+              Comprar
+            </button>
+          </div>
+        </div>
+        
+        <div class="bg-white shadow-md rounded overflow-hidden">
+          <img src="https://via.placeholder.com/300x200" alt="Tarjeta Gráfica 2" class="w-full">
+          <div class="p-4 text-left">
+            <h4 class="text-lg font-bold">NVIDIA RTX 4080</h4>
+            <p class="text-gray-600 mt-2">Excelente rendimiento y eficiencia energética para gamers y creadores.</p>
+            <button class="mt-4 bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">
+              Comprar
+            </button>
+          </div>
+        </div>
+        
+        <div class="bg-white shadow-md rounded overflow-hidden">
+          <img src="https://via.placeholder.com/300x200" alt="Tarjeta Gráfica 3" class="w-full">
+          <div class="p-4 text-left">
+            <h4 class="text-lg font-bold">AMD Radeon RX 7900 XTX</h4>
+            <p class="text-gray-600 mt-2">Rendimiento tope de gama con soporte para resoluciones ultra altas.</p>
+            <button class="mt-4 bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">
+              Comprar
+            </button>
+          </div>
+        </div>
+        
+        <div class="bg-white shadow-md rounded overflow-hidden">
+          <img src="https://via.placeholder.com/300x200" alt="Tarjeta Gráfica 4" class="w-full">
+          <div class="p-4 text-left">
+            <h4 class="text-lg font-bold">AMD Radeon RX 7800 XT</h4>
+            <p class="text-gray-600 mt-2">Equilibrio perfecto entre rendimiento y precio para 1440p.</p>
+            <button class="mt-4 bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">
+              Comprar
+            </button>
+          </div>
+        </div>
+        
+        <div class="bg-white shadow-md rounded overflow-hidden">
+          <img src="https://via.placeholder.com/300x200" alt="Tarjeta Gráfica 5" class="w-full">
+          <div class="p-4 text-left">
+            <h4 class="text-lg font-bold">NVIDIA RTX 4070 Ti</h4>
+            <p class="text-gray-600 mt-2">Gran opción para juegos a 1440p con alta tasa de FPS y Ray Tracing.</p>
+            <button class="mt-4 bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">
+              Comprar
+            </button>
+          </div>
+        </div>
+        
+        <div class="bg-white shadow-md rounded overflow-hidden">
+          <img src="https://via.placeholder.com/300x200" alt="Tarjeta Gráfica 6" class="w-full">
+          <div class="p-4 text-left">
+            <h4 class="text-lg font-bold">NVIDIA RTX 4060</h4>
+            <p class="text-gray-600 mt-2">Excelente rendimiento en 1080p con tecnologías de última generación.</p>
+            <button class="mt-4 bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">
+              Comprar
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- Footer -->
+  <footer id="contacto" class="bg-gray-800 text-white py-8">
+    <div class="container mx-auto text-center">
+      
+      <div class="mb-4 flex justify-center space-x-6">
+        
+        <a href="#" aria-label="Facebook" class="hover:text-blue-400">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M22.675 0h-21.35C.597 0 0 .597 0 1.325v21.351C0 23.403.597 24 1.325 24h11.495v-9.294H9.691v-3.622h3.129V8.413c0-3.1 1.893-4.787 4.659-4.787 1.325 0 2.463.099 2.794.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.764v2.313h3.588l-.467 3.622h-3.121V24h6.116c.729 0 1.325-.597 1.325-1.325V1.325C24 .597 23.403 0 22.675 0z"/>
+          </svg>
+        </a>
+      
+        <a href="#" aria-label="Twitter" class="hover:text-blue-400">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M23.954 4.569c-.885.389-1.83.654-2.825.775 1.014-.611 1.794-1.574 2.163-2.723-.951.555-2.005.959-3.127 1.184-.897-.959-2.178-1.559-3.594-1.559-2.717 0-4.917 2.2-4.917 4.917 0 .39.045.765.127 1.124-4.083-.205-7.702-2.159-10.126-5.134-.422.722-.666 1.561-.666 2.475 0 1.708.87 3.217 2.188 4.099-.807-.026-1.566-.248-2.229-.616v.061c0 2.385 1.693 4.374 3.946 4.827-.413.111-.849.171-1.296.171-.317 0-.626-.03-.927-.086.626 1.956 2.444 3.381 4.6 3.419-1.68 1.319-3.809 2.105-6.102 2.105-.396 0-.786-.023-1.17-.068 2.179 1.397 4.768 2.212 7.548 2.212 9.054 0 14.001-7.496 14.001-13.986 0-.209 0-.42-.016-.63.962-.689 1.8-1.56 2.46-2.548l-.047-.02z"/>
+          </svg>
+        </a>
+        
+        <a href="#" aria-label="Instagram" class="hover:text-pink-400">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.35 3.608 1.326.975.975 1.264 2.242 1.326 3.608.058 1.266.069 1.646.069 4.85s-.012 3.584-.069 4.85c-.062 1.366-.35 2.633-1.326 3.608-.975.975-2.242 1.264-3.608 1.326-1.266.058-1.646.069-4.85.069s-3.584-.012-4.85-.069c-1.366-.062-2.633-.35-3.608-1.326-.975-.975-1.264-2.242-1.326-3.608-.058-1.266-.069-1.646-.069-4.85s.012-3.584.069-4.85c.062-1.366.35-2.633 1.326-3.608.975-.975 2.242-1.264 3.608-1.326 1.266-.058 1.646-.069 4.85-.069m0-2.163C8.755 0 8.338.013 7.052.072 5.769.132 4.57.392 3.537 1.425 2.505 2.457 2.244 3.656 2.184 4.939.125 8.338 0 8.755 0 12s.125 3.662.072 4.948c.06 1.283.321 2.482 1.353 3.514 1.033 1.033 2.232 1.293 3.514 1.353C8.338 23.987 8.755 24 12 24s3.662-.013 4.948-.072c1.283-.06 2.482-.321 3.514-1.353 1.033-1.033 1.293-2.232 1.353-3.514C23.987 15.662 24 15.245 24 12s-.013-3.662-.072-4.948c-.06-1.283-.321-2.482-1.353-3.514C19.475.392 18.276.132 16.994.072 15.662.013 15.245 0 12 0z"/>
+            <circle cx="12" cy="12" r="3.09"/>
+          </svg>
+        </a>
+        
+        <a href="#" aria-label="LinkedIn" class="hover:text-blue-600">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M20.452 20.452h-3.747v-5.755c0-1.374-.025-3.145-1.917-3.145-1.928 0-2.225 1.501-2.225 3.056v5.844h-3.748V9.083h3.605v1.616h.052c.501-.949 1.722-1.952 3.548-1.952 3.795 0 4.493 2.497 4.493 5.735v5.97zM5.338 7.398c-1.201 0-2.178-.977-2.178-2.177s.977-2.178 2.178-2.178c1.199 0 2.177.977 2.177 2.178s-.978 2.177-2.177 2.177zm1.874 13.054H3.464v-10.37h3.748v10.37zM20.452 0H3.464c-.729 0-1.325.597-1.325 1.325v21.351c0 .728.596 1.325 1.325 1.325h16.988c.728 0 1.325-.597 1.325-1.325V1.325c0-.728-.597-1.325-1.325-1.325z"/>
+          </svg>
+        </a>
+
+      </div>
+      <!--Correo electrónico de contacto -->
+      <span class="text-sm mb-4">Contacto: <a href="mailto:contacto@Hardpoint.com" class="text-blue-400 hover:underline">contacto@hardwarestore.com</a></span>
+      <!---Copy-->
+      <p class="text-sm">&copy; 2024 Hardpoint. Todos los derechos reservados.</p>
+    </div>
+  </
+  
+
+
+</body>
+    
+</body>
+</html>
